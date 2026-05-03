@@ -6,7 +6,7 @@ Multi-label toxicity classifier for social media comments using Bidirectional LS
 
 This project implements an end-to-end deep learning pipeline to automatically classify user-generated comments into six toxicity categories. The goal is to support content moderation at scale, reducing reliance on manual review.
 
-The model is trained on ~160,000 English comments and produces a **binary vector of 6 elements** for each input comment — one value per toxicity category.
+The model is trained on ~160,000 English comments and produces a **binary vector of 6 elements** for each input comment - one value per toxicity category.
 
 ```
 "You are an idiot!" → [1, 0, 0, 0, 1, 0]
@@ -32,7 +32,7 @@ The model is trained on ~160,000 English comments and produces a **binary vector
 - **GlobalMaxPooling1D**
 - **Dense(128)** + BatchNormalization + Dropout(0.4)
 - **Dense(64)** + Dropout(0.3)
-- **Dense(6, sigmoid)** — independent probability per label
+- **Dense(6, sigmoid)** - independent probability per label
 
 **Key design choices:**
 - **Focal Loss** (γ=2, α=0.25) instead of Weighted BCE to handle class imbalance without gradient explosion
@@ -65,13 +65,13 @@ https://proai-datasets.s3.eu-west-3.amazonaws.com/Filter_Toxic_Comments_dataset.
 ## Notebook Structure
 
 1. Setup and dependencies
-2. EDA — raw data
+2. EDA - raw data
 3. Text preprocessing
 4. Multilabel stratified split
 5. Post-cleaning EDA and data-driven hyperparameter selection
 6. Tokenization, padding and Focal Loss
 7. Model architecture (Bidirectional LSTM)
-8. Training — batch size search
+8. Training - batch size search
 9. Evaluation on test set
 10. Inference
 11. Summary and conclusions
