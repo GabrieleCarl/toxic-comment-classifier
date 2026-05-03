@@ -1,0 +1,31 @@
+{
+  "max_vocab": 70844,
+  "max_len": 230,
+  "embed_dim": 128,
+  "label_cols": [
+    "toxic",
+    "severe_toxic",
+    "obscene",
+    "threat",
+    "insult",
+    "identity_hate"
+  ],
+  "label_names": [
+    "Toxic",
+    "Severely Toxic",
+    "Obscene",
+    "Threat",
+    "Insult",
+    "Identity Hate"
+  ],
+  "focal_gamma": 2.0,
+  "focal_alpha": 0.25,
+  "optimal_thresholds": [
+    0.34000000000000014,
+    0.3100000000000001,
+    0.38000000000000017,
+    0.2,
+    0.38000000000000017,
+    0.24000000000000005
+  ]
+}
